@@ -1,0 +1,196 @@
+/* || General styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 4.5rem;
+  margin-bottom: 4rem;
+  width: 95%;
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+  color: #5c5c5b;
+}
+
+/* || Typography */
+
+main > p {
+  margin: 4.5rem 0;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 5rem;
+}
+
+main p {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  font-weight: 500;
+  line-height: 2.75rem;
+}
+
+/* || Main Navigation */
+
+.mr-coffee-center-black-logo {
+  text-align: center;
+}
+
+.mr-coffee-center-black-logo img {
+  width: 15rem;
+}
+
+main > div:not(:first-child) {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.first-section {
+  margin-top: 2rem;
+  margin-bottom: 9rem;
+}
+
+.text-left {
+  width: 50%;
+}
+
+.text-left p:last-child {
+  margin-bottom: 0;
+}
+
+.first-section img {
+  width: 40%;
+}
+
+.second-section {
+  margin-bottom: 9rem;
+}
+
+.second-section img {
+  width: 40%;
+}
+
+.text-right {
+  width: 50%;
+}
+
+.text-right p:last-child {
+  margin-bottom: 0;
+}
+
+/* || SITEWIDE */
+
+nav {
+  background-color: #6a7c8c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+  width: 100%;
+}
+
+.navbar-logo {
+  margin-left: 2.5em;
+  width: 13rem;
+}
+
+nav img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.navbar-links-container {
+  min-width: 25%;
+  gap: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+footer {
+  font-weight: 600;
+  color: #fff;
+  background-color: #6a7c8c;
+  text-align: center;
+  height: 15vh;
+  width: 100%;
+  position: relative;
+}
+
+footer > img:first-of-type {
+  width: 5vh;
+  position: absolute;
+  left: 0;
+  margin-left: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.social-networks {
+  margin: 0 auto;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-networks-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-networks img {
+  width: 2rem;
+  margin-top: 1rem;
+}
+
+/* || UTILITIES */
+
+@media only screen and (max-width: 768px) {
+  .navbar-links-container {
+    flex-direction: column;
+  }
+
+  .mr-coffee-center-black-logo img {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    margin: 1.5rem 0 0;
+  }
+
+  .navbar-links-container {
+    margin: 1.5rem 0;
+  }
+}

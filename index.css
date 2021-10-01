@@ -27,7 +27,7 @@ body {
 
 .card-title {
   font-size: 1.75em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   color: #ffffff;
   text-shadow: 0 0.05em 0.2em #5c5c5b;
 }
@@ -36,8 +36,8 @@ body {
   margin: 0 auto;
   width: 75%;
   color: #ffffff;
-  font-weight: 700;
-  font-size: 1.25em;
+  font-weight: 600;
+  font-size: 1em;
   line-height: 1.5em;
 }
 
@@ -69,7 +69,6 @@ main > p:last-child {
 
 .cards-container {
   display: flex;
-  min-height: 40vh;
   width: 100%;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -77,26 +76,32 @@ main > p:last-child {
 
 .cards-container > div {
   background-color: #bbc2c9;
+  padding-bottom: 3rem;
   display: flex;
   flex-flow: column wrap;
   width: 30%;
   box-shadow: 0 0.1rem 0.2rem 0rem #5c5c5b;
-  min-height: 60vh;
 }
 
-.cards-container > div .cards-icons {
-  width: 35%;
-  margin: 4em auto 1.5em;
+.cards-icons {
+  width: 8rem;
+  margin: 3em auto 1.5em;
 }
 
 .open-hours {
   display: flex;
   flex-flow: row nowrap;
   font-size: 2rem;
+  align-items: center;
   color: #5c5c5b;
   font-weight: 600;
   margin-bottom: 6rem;
   margin-top: 4rem;
+}
+
+.open-hours p {
+  position: relative;
+  top: 1.25rem;
 }
 
 .open-hours img {
@@ -126,18 +131,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   min-height: 10vh;
   width: 100%;
 }
 
-.navbar-logo {
-  margin-left: 2.5em;
-  width: 13rem;
-}
-
 nav img {
-  max-height: 100%;
-  max-width: 100%;
+  margin-left: 2.5em;
+  width: 10rem;
 }
 
 .navbar-links-container {
@@ -216,13 +217,13 @@ button {
   border: none;
   outline: none;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5em;
   font-weight: 600;
   background-color: #6b7b8b;
   border-radius: 1rem;
   padding: 1em 2.5em;
-  margin-top: 10rem;
-  width: 25%;
+  margin-top: 6rem;
+  width: 20rem;
   box-shadow: 0 0.2rem 0.2rem 0 #5c5c5b;
 }
 
@@ -233,28 +234,133 @@ span {
 
 /* || MEDIA QUERIES */
 
-@media only screen and (max-width: 768px) {
-  .navbar-links-container {
+@media screen and (max-width: 1200px) {
+  .cards-container {
     flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .cards-container div {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav img {
+    width: 8rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
   }
 
   .mr-coffee-center-black-logo img {
     width: 10rem;
   }
+
+  button {
+    margin-top: 6rem;
+  }
+
+  .open-hours {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .open-hours img {
+    margin: 0;
+  }
+
+  .columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  .column {
+    width: 90%;
+  }
+
+  main > p:last-child {
+    margin: 6rem 0;
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
   nav {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 0;
   }
 
-  .navbar-logo {
-    margin: 1.5rem 0 0;
+  nav img {
+    margin: 1rem 0 0 0;
   }
 
   .navbar-links-container {
-    margin: 1.5rem 0;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .cards-container div {
+    width: 90%;
+    padding-bottom: 1.5rem;
+  }
+
+  .cards-icons {
+    margin-top: 1.5rem;
+    width: 6rem;
+  }
+
+  .card-text {
+    width: 90%;
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+  }
+
+  button {
+    width: 15rem;
+    font-size: 1.25rem;
+  }
+
+  .columns,
+  span {
+    font-size: 1.5rem;
+    gap: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .open-hours {
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 1.75rem;
+    gap: 1.75rem;
+    margin-bottom: 4rem;
+  }
+
+  .open-hours img {
+    margin: 0;
+  }
+
+  main > p:nth-last-child(-n + 2) {
+    line-height: 2rem;
+    width: 100%;
+  }
+
+  main > p:last-child {
+    font-size: 1.5rem;
+    margin: 6rem 0.5rem;
+    width: 100%;
+  }
+
+  footer > img:first-of-type {
+    margin-left: 1rem;
+    width: 2.25rem;
   }
 }
